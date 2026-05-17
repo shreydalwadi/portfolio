@@ -1,0 +1,541 @@
+<!-- UPDATED PORTFOLIO WEBSITE -->
+<!-- SAVE AS index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Shrey Dalwadi | Portfolio</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS Animation -->
+  <link rel="stylesheet"
+  href="https://unpkg.com/aos@2.3.4/dist/aos.css"/>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#07111f;
+      color:white;
+      font-family:Arial, Helvetica, sans-serif;
+      overflow-x:hidden;
+    }
+
+    /* ANIMATED BACKGROUND */
+
+    .bg-animation{
+      position:fixed;
+      width:100%;
+      height:100%;
+      overflow:hidden;
+      z-index:-1;
+    }
+
+    .circle{
+      position:absolute;
+      border-radius:50%;
+      background:linear-gradient(45deg,#00c6ff,#7f5af0);
+      opacity:0.15;
+      animation:animate 18s linear infinite;
+    }
+
+    .circle:nth-child(1){
+      width:350px;
+      height:350px;
+      top:-100px;
+      left:-100px;
+    }
+
+    .circle:nth-child(2){
+      width:250px;
+      height:250px;
+      bottom:-80px;
+      right:-50px;
+    }
+
+    .circle:nth-child(3){
+      width:180px;
+      height:180px;
+      top:50%;
+      left:60%;
+    }
+
+    @keyframes animate{
+      0%{
+        transform:translateY(0px) rotate(0deg);
+      }
+
+      50%{
+        transform:translateY(40px) rotate(180deg);
+      }
+
+      100%{
+        transform:translateY(0px) rotate(360deg);
+      }
+    }
+
+    /* GLASS EFFECT */
+
+    .glass{
+      background:rgba(255,255,255,0.05);
+      backdrop-filter:blur(10px);
+      border:1px solid rgba(255,255,255,0.08);
+      box-shadow:0 8px 30px rgba(0,0,0,0.3);
+    }
+
+    /* TEXT GRADIENT */
+
+    .gradient{
+      background:linear-gradient(to right,#00c6ff,#7f5af0);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    /* BUTTON */
+
+    .btn{
+      background:linear-gradient(to right,#00c6ff,#7f5af0);
+      padding:14px 32px;
+      border-radius:999px;
+      transition:0.4s;
+      font-weight:bold;
+    }
+
+    .btn:hover{
+      transform:translateY(-5px);
+      box-shadow:0 10px 25px rgba(0,198,255,0.4);
+    }
+
+    /* CARD HOVER */
+
+    .card:hover{
+      transform:translateY(-12px);
+      transition:0.4s;
+      box-shadow:0 15px 35px rgba(127,90,240,0.4);
+    }
+
+    /* HERO TITLE ANIMATION */
+
+    .hero-title{
+      animation:slide 1.5s ease;
+    }
+
+    @keyframes slide{
+      from{
+        opacity:0;
+        transform:translateY(60px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0px);
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- BACKGROUND -->
+  <div class="bg-animation">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+
+  <!-- NAVBAR -->
+
+  <nav class="fixed w-full top-0 z-50 glass">
+
+    <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+
+      <h1 class="text-2xl font-bold gradient">
+        Shrey Dalwadi
+      </h1>
+
+      <ul class="hidden md:flex gap-8 text-sm">
+
+        <li><a href="#about" class="hover:text-cyan-300">About</a></li>
+
+        <li><a href="#certificates" class="hover:text-cyan-300">Certificates</a></li>
+
+        <li><a href="#projects" class="hover:text-cyan-300">Project</a></li>
+
+        <li><a href="#internship" class="hover:text-cyan-300">Internship</a></li>
+
+        <li><a href="#contact" class="hover:text-cyan-300">Contact</a></li>
+
+      </ul>
+
+    </div>
+
+  </nav>
+
+  <!-- HERO SECTION -->
+
+  <section class="min-h-screen flex items-center px-6">
+
+    <div class="max-w-7xl mx-auto text-center">
+
+      <div data-aos="zoom-in">
+
+        <h1 class="hero-title text-6xl md:text-8xl font-extrabold mb-6">
+
+          <span class="gradient">Shrey Dalwadi</span>
+
+        </h1>
+
+        <p class="text-2xl md:text-3xl text-gray-300 mb-8">
+
+          Computer Engineering Student <br>
+          & Aspiring Web Developer
+
+        </p>
+
+        <p class="max-w-3xl mx-auto text-gray-400 leading-9 text-lg mb-12">
+
+          Passionate about modern technologies,web development,cloud computing, and software engineering.
+          Currently doing internship and building real-world projects.
+
+        </p>
+
+        <div class="flex justify-center gap-5 flex-wrap">
+
+          <a href="https://github.com/shreydalwadi"
+          target="_blank"
+          class="btn">
+
+            <i class="fab fa-github mr-2"></i>
+            GitHub
+
+          </a>
+
+          <a href="https://www.linkedin.com/in/shrey-dalwadi-79126b3b5?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+          target="_blank"
+          class="btn">
+
+            <i class="fab fa-linkedin mr-2"></i>
+            LinkedIn
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section id="about" class="py-24 px-6">
+
+    <div class="max-w-6xl mx-auto">
+
+      <h2 class="text-5xl font-bold text-center mb-16 gradient"
+      data-aos="fade-up">
+
+        About Me
+
+      </h2>
+
+      <div class="glass rounded-3xl p-12"
+      data-aos="zoom-in">
+
+        <p class="text-gray-300 leading-10 text-lg text-center">
+
+          I am a passionate Computer Engineering student interested in
+          web development,software devlopment, cloud technologies, and modern web applications.
+          I enjoy building projects and learning new technologies while improving
+          my practical development skills through internship experience.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CERTIFICATES -->
+
+  <section id="certificates" class="py-24 px-6">
+
+    <div class="max-w-7xl mx-auto">
+
+      <h2 class="text-5xl font-bold text-center mb-16 gradient"
+      data-aos="fade-up">
+
+        My Certificates
+
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-10">
+
+        <!-- CERTIFICATE -->
+
+        <div class="glass rounded-3xl p-10 card"
+        data-aos="fade-up">
+
+          <i class="fas fa-award text-5xl text-cyan-400 mb-6"></i>
+
+          <h3 class="text-2xl font-bold mb-4">
+            Cloud Foundation
+          </h3>
+
+          <p class="text-gray-400">
+            Issued by Aws Aceademy
+          </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-10 card"
+        data-aos="fade-up">
+
+          <i class="fas fa-award text-5xl text-cyan-400 mb-6"></i>
+
+          <h3 class="text-2xl font-bold mb-4">
+            Introduction to Artificial Intelligenc
+          </h3>
+
+          <p class="text-gray-400">
+            Issued By Simply Learn
+          </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-10 card"
+        data-aos="fade-up">
+
+          <i class="fas fa-award text-5xl text-cyan-400 mb-6"></i>
+
+          <h3 class="text-2xl font-bold mb-4">
+            Artificial Intelligence Beginners Guid
+          </h3>
+
+          <p class="text-gray-400">
+             Issued By Simply Learn
+          </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-10 card"
+        data-aos="fade-up">
+
+          <i class="fas fa-award text-5xl text-cyan-400 mb-6"></i>
+
+          <h3 class="text-2xl font-bold mb-4">
+            Machine Learning Using Python
+          </h3>
+
+          <p class="text-gray-400">
+            Issued By Simply Learn
+          </p>
+
+        </div>
+
+        <div class="glass rounded-3xl p-10 card"
+        data-aos="fade-up">
+
+          <i class="fas fa-award text-5xl text-cyan-400 mb-6"></i>
+
+          <h3 class="text-2xl font-bold mb-4">
+            Introduction to Generative Ai
+          </h3>
+
+          <p class="text-gray-400">
+            Power By Google Cloud
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+
+  <section id="projects" class="py-24 px-6">
+
+    <div class="max-w-7xl mx-auto">
+
+      <h2 class="text-5xl font-bold text-center mb-16 gradient"
+      data-aos="fade-up">
+
+        Projects
+
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-10">
+
+        <!-- PROJECT CARD -->
+
+        <div class="glass rounded-3xl overflow-hidden card"
+        data-aos="zoom-in">
+
+          <img
+          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+          class="w-full h-72 object-cover">
+
+          <div class="p-10">
+
+            <h3 class="text-3xl font-bold mb-5">
+
+              Ride Sharing System
+
+            </h3>
+
+            <p class="text-gray-400 leading-8 mb-8">
+
+              Modern responsive Ride Sharing System website built using
+              HTML, CSS and pythone.
+
+            </p>
+
+            <a href="https://github.com/shreydalwadi/ride-sharing-system"
+            target="_blank"
+            class="btn">
+
+              View Project
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- INTERNSHIP -->
+
+  <section id="internship" class="py-24 px-6">
+
+    <div class="max-w-5xl mx-auto">
+
+      <h2 class="text-5xl font-bold text-center mb-16 gradient"
+      data-aos="fade-up">
+
+        Internship
+
+      </h2>
+
+      <div class="glass rounded-3xl p-12 card"
+      data-aos="zoom-in">
+
+        <h3 class="text-3xl font-bold mb-4">
+
+          Web Development Internship
+
+        </h3>
+
+        <p class="text-cyan-300 mb-5">
+
+         At Preltix Private Limited 
+         [11-MAY-2026 to 26-May-2026]
+
+        </p>
+
+        <p class="text-gray-400 leading-9">
+
+          Currently working on real-world development tasks,
+          improving Web Devlopment engineering skills and gaining
+          practical industry experience.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section id="contact" class="py-24 px-6">
+
+    <div class="max-w-4xl mx-auto text-center">
+
+      <h2 class="text-5xl font-bold mb-14 gradient"
+      data-aos="fade-up">
+
+        Contact
+
+      </h2>
+
+      <div class="glass rounded-3xl p-12"
+      data-aos="zoom-in">
+
+        <i class="fas fa-envelope text-6xl text-cyan-400 mb-8"></i>
+
+        <h3 class="text-3xl font-bold mb-6">
+
+          Contact Via Email
+
+        </h3>
+
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=shrey230406@gmail.com"
+        class="text-2xl text-cyan-300 hover:text-cyan-200">
+
+        shrey230406@gmail.com
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer class="py-10 border-t border-slate-800 text-center">
+
+    <p class="text-gray-500">
+
+      © 2026 All Rights Reserved — Shrey Dalwadi
+
+    </p>
+
+  </footer>
+
+  <!-- AOS -->
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <script>
+
+    AOS.init({
+      duration:1200,
+      once:true
+    });
+
+  </script>
+
+</body>
+</html>
